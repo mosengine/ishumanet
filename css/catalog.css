@@ -1,0 +1,177 @@
+sub,
+sup {
+    /* Specified in % so that the sup/sup is the right size relative to the surrounding text */
+    font-size: 75%;
+    /* Zero out the line-height so that it doesn't interfere with the positioning that follows */
+    line-height: 0;
+    /* Where the magic happens: makes all browsers position the sup/sup properly, relative to the surrounding text */
+    position: relative;
+    /* Note that if you're using Eric Meyer's reset.css, this is already set and you can remove this rule */
+    vertical-align: baseline;
+}
+
+sup {
+    /* Move the superscripted text up */
+    top: -0.5em;
+}
+
+sub {
+    /* Move the subscripted text down, but only half as far down as the superscript moved up */
+    bottom: -0.25em;
+}
+
+.catalog {
+    background: #eee;
+    padding: 32px 0;
+}
+
+.catalog h2 {
+    font-size: 40px;
+    font-family: "pf_beausans_prosemibold";
+    margin-bottom: 60px;
+}
+
+.block * {
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    margin-bottom: 32px;
+}
+
+.block > .product {
+    box-sizing: border-box;
+    background: white;
+    background: url(../i/catalog/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 8px;
+    padding: 16px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.block > .product > .img {
+    width: 0%;
+}
+
+.block > .product > .img > img {
+    width: 100%;
+}
+
+.block > .product > .noimg {
+    width: 100%;
+    padding-left: 16px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.block > .product > .noimg > .title {
+    text-align: left;
+    font-size: 2em;
+    margin: 16px 0 24px 0;
+    ;
+}
+
+.block > .product > .noimg > .description {
+    margin-bottom: 24px;
+    color: #555;
+}
+
+.block > .product > .noimg > .info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.block > .product > .noimg > .info > * {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 1.5em;
+}
+
+.block > .product > .noimg > .info > .depth:before {
+    display: inline-block;
+    content: "Толщина: ";
+    margin-right: 8px;
+}
+
+.block > .product > .noimg > .info > .noise:before {
+    display: inline-block;
+    content: "Шумоподавление: ";
+    margin-right: 8px;
+}
+
+.block > .product > .noimg > .info > .price:before {
+    display: inline-block;
+    content: "Цена: ";
+    margin-right: 8px;
+}
+
+.block > .details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.block:last-child > .details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.block > .details > .item {
+    padding: 5px;
+    width: 11%;
+    background: white;
+    margin: 0 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.block > .details > .item > .image {
+    min-height: 140px;
+}
+
+.block > .details > .item > .image > img {
+    width: 100%;
+}
+
+.block > .details > .item > .name {
+    padding: 4px;
+    text-align: center;
+    width: 100%;
+}
+
+.block > .details > .item > .description {
+    font-size: 0.8em;
+}
